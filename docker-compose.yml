@@ -29,3 +29,4 @@ services:
 
 
 # docker-compose run app sh -c ""
+# docker-compose run app sh -c "python manage.py test && flake8"
