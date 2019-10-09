@@ -99,7 +99,14 @@ class PrivateUserApiTests(TestCase):
 
     def test_retrieve_profile_success(self):
         """Test retrieving profile for logged in used"""
-        pass
+        res = self.client.get(ME_URL)
+
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+        self.assertEqual(res.data, {
+            'name': self.user.name,
+            'email': self.user.email
+        })
+
 
     def test_post_me_not_allowed(self):
         """Test that POST is not allowed on the me url"""
@@ -108,4 +115,5 @@ class PrivateUserApiTests(TestCase):
 
     def test_update_user_profile(self):
         """Test updating the user profile for authenticated user"""
-        pass
+        payload = {'name': 'new name', 'password': 'newpassword123'}
+        res = self.client.patch(ME_URL, payload)
