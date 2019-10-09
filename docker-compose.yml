@@ -24,8 +24,10 @@ services:
     image: postgres:10-alpine
     environment:
       - POSTGRES_DB=app
-      - POSTGRES_USER=postgres
+      - POSTGRES_USER=main
       - POSTGRES_PASSWORD=supersecretpassword
+    ports:
+      - "54320:5432"
 
 
 # docker-compose run app sh -c ""
