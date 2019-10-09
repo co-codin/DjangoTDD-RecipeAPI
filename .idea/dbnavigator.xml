@@ -23,7 +23,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="718acc51-a4db-465b-96ed-8ffa3c757e28">
+        <schema name="public" object-types="function, sequence, view, table" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="718acc51-a4db-465b-96ed-8ffa3c757e28">
@@ -70,11 +74,11 @@
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="db" />
-          <port value="5432" />
+          <host value="localhost" />
+          <port value="54320" />
           <database value="app" />
           <type value="USER_PASSWORD" />
-          <user value="postgres" />
+          <user value="main" />
           <deprecated-pwd value="c3VwZXJzZWNyZXRwYXNzd29yZA==" />
         </database>
         <properties>
